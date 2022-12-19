@@ -22,8 +22,24 @@ namespace LinkedList
                 head = node;
             }
         }
+        internal void Append(int item)
+        {
+            Node node = new Node(item);
+            if (head == null)
+                head = node;
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+        }
         internal void Display()
         {
+
             if (head == null)
                 System.Console.WriteLine("List is Empty");
             else

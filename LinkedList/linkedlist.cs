@@ -50,7 +50,6 @@ namespace LinkedList
             else
             {
                 Node temp = head;
-                try
                 {
                     while (position > 2)
                     {
@@ -59,10 +58,6 @@ namespace LinkedList
                     }
                     node.next = temp.next;
                     temp.next = node;
-                }
-                catch (NullReferenceException)
-                {
-                    System.Console.WriteLine("Index out of bounds");
                 }
             }
         }
